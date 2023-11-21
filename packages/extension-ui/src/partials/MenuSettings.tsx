@@ -95,7 +95,7 @@ function MenuSettings ({ className, reference }: Props): React.ReactElement<Prop
     >
       <MenuItem
         className='setting'
-        title='Theme'
+        title={t('Theme')}
       >
         <Switch
           checked={theme === 'dark'}

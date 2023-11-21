@@ -32,7 +32,7 @@ export default styled(Box)<Props>`
   position: relative;
 
   .banner {
-    background: darkorange;
+    background: darkgreen;
     border-radius: 0 var(--borderRadius) 0 var(--borderRadius);
     color: white;
     font-size: 0.75rem;

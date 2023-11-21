@@ -105,7 +105,7 @@ function Account ({ address, className, genesisHash, isExternal, isHardware, isH
       >
         {t('Forget Account')}
       </Link>
-      {!isHardware && (
+      {false && !isHardware && (
         <>
           <MenuDivider />
           <div className='menuItem'>

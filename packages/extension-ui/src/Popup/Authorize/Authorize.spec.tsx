@@ -24,11 +24,11 @@ const { configure, mount } = enzyme;
 // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment,@typescript-eslint/no-unsafe-call
 configure({ adapter: new Adapter() });
 
-const oneRequest = [{ id: '1', request: { origin: '???' }, url: 'http://polkadot.org' }];
+const oneRequest = [{ id: '1', request: { origin: '???' }, url: 'http://vircle.xyz' }];
 
 const twoRequests = [
   ...oneRequest,
-  { id: '2', request: { origin: 'abc' }, url: 'http://polkadot.pl' }
+  { id: '2', request: { origin: 'abc' }, url: 'http://vircle.xyz' }
 ];
 
 const oneAccount = [
@@ -70,7 +70,7 @@ describe('Authorize', () => {
     const wrapper = mountAuthorize(oneRequest);
 
     expect(wrapper.find(Request).length).toBe(1);
-    expect(wrapper.find(Request).find('.warning-message').text()).toBe('An application, self-identifying as ??? is requesting access from http://polkadot.org');
+    expect(wrapper.find(Request).find('.warning-message').text()).toBe('An application, self-identifying as ??? is requesting access from http://vircle.xyz');
   });
 
   it('render more request but just one accept button', () => {
@@ -78,7 +78,7 @@ describe('Authorize', () => {
 
     expect(wrapper.find(Request).length).toBe(2);
     expect(wrapper.find(Warning).length).toBe(2);
-    expect(wrapper.find(Request).at(1).find('.warning-message').text()).toBe('An application, self-identifying as abc is requesting access from http://polkadot.pl');
+    expect(wrapper.find(Request).at(1).find('.warning-message').text()).toBe('An application, self-identifying as abc is requesting access from http://vircle.xyz');
     expect(wrapper.find('button.acceptButton').length).toBe(1);
   });
 
@@ -86,7 +86,7 @@ describe('Authorize', () => {
     const wrapper = mountAuthorize(oneRequest, []);
 
     expect(wrapper.find(Request).length).toBe(1);
-    expect(wrapper.find(Request).find('.warning-message').text()).toBe("You do not have any account. Please create an account and refresh the application's page.");
+    expect(wrapper.find(Request).find('.warning-message').text()).toBe("你还没有帐户，请先创建一个帐户并刷新应用程序。");
     expect(wrapper.find('button.acceptButton').length).toBe(1);
   });
 

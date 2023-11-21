@@ -14,13 +14,16 @@ interface Option {
 export default function getLanguageOptions (): Option[] {
   return [
     // default/native
+    /*
     {
       text: 'English',
       value: 'en'
     },
+    */
     {
       text: '汉语',
       value: 'zh'
+    /*
     },
     {
       text: 'Français',
@@ -41,6 +44,7 @@ export default function getLanguageOptions (): Option[] {
     {
       text: 'اردو',
       value: 'ur'
+    */
     }
   ];
 }

@@ -53,7 +53,7 @@ function AuthManagement ({ className }: Props): React.ReactElement<Props> {
         <InputFilter
           className='inputFilter'
           onChange={_onChangeFilter}
-          placeholder={t('example.com')}
+          placeholder={t('explorer.vircle.xyz')}
           value={filter}
           withReset
         />

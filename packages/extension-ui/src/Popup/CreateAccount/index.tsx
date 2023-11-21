@@ -110,13 +110,17 @@ function CreateAccount ({ className }: Props): React.ReactElement {
             )
             : (
               <>
-                <Dropdown
-                  className={className}
-                  label={t('Network')}
-                  onChange={_onChangeNetwork}
-                  options={options}
-                  value={genesisHash}
-                />
+		{false && (
+		  <>
+                    <Dropdown
+                      className={className}
+                      label={t('Network')}
+                      onChange={_onChangeNetwork}
+                      options={options}
+                      value={genesisHash}
+                    />
+                  </>
+		)}
                 <AccountNamePasswordCreation
                   buttonLabel={t('Add the account with the generated seed')}
                   isBusy={isBusy}

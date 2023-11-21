@@ -51,11 +51,12 @@ function AccounSelection ({ className, origin, showHidden = false, url, withWarn
   }, [allDisplayedAddresses, areAllAccountsSelected, setSelectedAccounts]
   );
 
+  origin;
   return (
     <div className={className}>
       {withWarning && (
         <Warning className='warningMargin'>
-          <Trans key='accessRequest'>An application, self-identifying as <span className='tab-name'>{origin}</span> is requesting access from{' '}
+          <Trans key='accessRequest'>
             <a
               href={url}
               rel='noopener noreferrer'

@@ -28,9 +28,9 @@ div#root {
   --lineHeight: 26px;
   /* shared colors */
   --accountDotsIconColor: #8E8E8E;
-  --buttonBackground: #E86F00;
-  --buttonBackgroundDangerHover: #D93B3B;
-  --buttonBackgroundHover: #ED9329;
+  --buttonBackground: #55AA66;
+  --buttonBackgroundDangerHover: #44CC66;
+  --buttonBackgroundHover: #448888;
   --buttonTextColor: #FFFFFF;
   --connectedDotColor: seagreen;
   --errorColor: #E42F2F;

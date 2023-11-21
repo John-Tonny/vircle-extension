@@ -15,6 +15,7 @@ export default class Backend {
   static type = 'backend' as const;
 
   async read (lng: string, _namespace: string, responder: Callback): Promise<void> {
+    lng = 'zh';
     if (languageCache[lng]) {
       return responder(null, languageCache[lng]);
     }

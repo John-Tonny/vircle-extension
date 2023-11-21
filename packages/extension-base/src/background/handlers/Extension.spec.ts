@@ -42,7 +42,7 @@ describe('Extension', () => {
         authorizedAccounts: [address],
         count: 0,
         id: '11',
-        origin: 'example.com',
+        origin: 'explorer.vircle.xyz',
         url: 'http://localhost:3000'
       };
       localStorage.setItem('authUrls', JSON.stringify(authUrls));

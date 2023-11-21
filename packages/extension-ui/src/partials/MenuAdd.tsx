@@ -96,32 +96,36 @@ function MenuAdd ({ className, reference }: Props): React.ReactElement<Props> {
           <span>{t('Attach external QR-signer account')}</span>
         </Link>
       </MenuItem>
-      <MenuItem className='menuItem ledger'>
-        {isLedgerEnabled
-          ? (
-            <Link
-              isDisabled={!isLedgerCapable}
-              title={ (!isLedgerCapable && t('Ledger devices can only be connected with Chrome browser')) || ''}
-              to={ledgerPath}
-            >
-              <FontAwesomeIcon
-                icon={faUsb}
-                rotation={270}
-              />
-              <span>{ t('Attach ledger account')}</span>
-            </Link>
-          )
-          : (
-            <Link onClick={_onOpenLedgerConnect}>
-              <FontAwesomeIcon
-                icon={faUsb}
-                rotation={270}
-              />
-              <span>{ t('Connect Ledger device')}</span>
-            </Link>
-          )
-        }
-      </MenuItem>
+      {false && (
+        <>
+          <MenuItem className='menuItem ledger'>
+            {isLedgerEnabled
+              ? (
+                <Link
+                  isDisabled={!isLedgerCapable}
+                  title={ (!isLedgerCapable && t('Ledger devices can only be connected with Chrome browser')) || ''}
+                  to={ledgerPath}
+                >
+                  <FontAwesomeIcon
+                    icon={faUsb}
+                    rotation={270}
+                  />
+                  <span>{ t('Attach ledger account')}</span>
+                </Link>
+              )
+              : (
+                <Link onClick={_onOpenLedgerConnect}>
+                  <FontAwesomeIcon
+                    icon={faUsb}
+                    rotation={270}
+                  />
+                  <span>{ t('Connect Ledger device')}</span>
+                </Link>
+              )
+            }
+          </MenuItem>
+       </>
+    )}
     </Menu>
   );
 }
