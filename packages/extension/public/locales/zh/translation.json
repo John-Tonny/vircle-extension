@@ -132,5 +132,7 @@
   "Ask again later": "等会再问",
   "Connect {{total}} account(s)": "连接 {{total}} 账户",
   "Understood": "明白了",
+  "Allow use on any chain": "允许在任何链条上使用",
+  "Remember my password for the next {{expiration}} minutes": "请记住我的密码在接下来的{{expiration}}分钟内",
   "You do not have any account. Please create an account and refresh the application's page.": "你还没有帐户，请先创建一个帐户并刷新应用程序。"
 }

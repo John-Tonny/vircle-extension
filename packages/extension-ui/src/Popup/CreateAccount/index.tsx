@@ -110,7 +110,7 @@ function CreateAccount ({ className }: Props): React.ReactElement {
             )
             : (
               <>
-		{false && (
+		{true && (
 		  <>
                     <Dropdown
                       className={className}
